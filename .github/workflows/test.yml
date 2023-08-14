@@ -1,0 +1,21 @@
+name: test
+on:
+  push:
+    branches:
+      - 2.5.0-tempfix
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.2']
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+
+      - run: composer install --no-progress
+      - run: vendor/bin/phpunit --testdox
