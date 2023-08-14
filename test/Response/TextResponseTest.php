@@ -14,11 +14,9 @@ use InvalidArgumentException;
 use Laminas\Diactoros\Response\TextResponse;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
-use Prophecy\PhpUnit\ProphecyTrait;
 
 class TextResponseTest extends TestCase
 {
-    use ProphecyTrait;
 
     public function testConstructorAcceptsBodyAsString()
     {

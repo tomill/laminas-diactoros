@@ -14,11 +14,9 @@ use InvalidArgumentException;
 use Laminas\Diactoros\Response\HtmlResponse;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\StreamInterface;
-use Prophecy\PhpUnit\ProphecyTrait;
 
 class HtmlResponseTest extends TestCase
 {
-    use ProphecyTrait;
 
     public function testConstructorAcceptsHtmlString()
     {
